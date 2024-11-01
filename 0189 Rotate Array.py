@@ -5,8 +5,6 @@ class Solution:
     def rotate(self, nums: List[int], k: int) -> None:
         """
         Rotate array to the right by k steps in-place.
-        Time complexity: O(n)
-        Space complexity: O(1)
         
         Args:
             nums: Array to rotate
