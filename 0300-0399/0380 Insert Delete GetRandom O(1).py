@@ -10,13 +10,10 @@ class RandomizedSet:
         self.values: List[int] = []
         # Dictionary to store value -> index mapping for O(1) lookup
         self.value_to_index: Dict[int, int] = {}
-
-        self.num_values = 0
         
     def insert(self, val: int) -> bool:
         """
         Insert value if not present.
-        Time complexity: O(1)
         
         Args:
             val: Value to insert
@@ -30,7 +27,7 @@ class RandomizedSet:
         # Add value to end of list and store its index
         self.value_to_index[val] = len(self.values)
         self.values.append(val)
-        self.num_values += 1
+
         return True
         
     def remove(self, val: int) -> bool:
@@ -58,8 +55,6 @@ class RandomizedSet:
         self.values.pop()
         del self.value_to_index[val]
 
-        self.num_values -= 1
-
         return True
         
     def getRandom(self) -> int:
@@ -69,4 +64,4 @@ class RandomizedSet:
         Returns:
             Random value from set
         """
-        return self.values[randint(0, self.num_values - 1)]
+        return self.values[randint(0, len(self.values) - 1)]
