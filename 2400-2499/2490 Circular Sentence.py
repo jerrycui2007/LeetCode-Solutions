@@ -22,6 +22,5 @@ class Solution:
         return words[0][0] == words[-1][-1]
 
 
-
 if __name__ == '__main__':
     print(Solution().isCircularSentence("leetcode exercises sound delightful"))
