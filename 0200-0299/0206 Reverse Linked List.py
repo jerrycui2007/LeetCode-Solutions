@@ -35,6 +35,7 @@ class Solution:
         while current is not None:
             next = current.next
             current.next = previous
+
             previous = current
             current = next
         
